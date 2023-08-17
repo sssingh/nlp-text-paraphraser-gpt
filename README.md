@@ -16,7 +16,7 @@ This page, describes the app usage and architecture
 Input a text paragraph in the provided text space and then click the 'Para' button. The app will analyse the input text and generate a 'paraphrased' version of the input text paragraph while keeping the sense of the paragraph unaltered. Below is an example of input and output... 
 
 #### Input
-<img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/streamlit/assets/input-texts.png?raw=true" width="1000" height="500"/><br>
+<img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/streamlit/assets/input-texts.png?raw=true" width="1000" height="600"/><br>
 
 #### Output
 <img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/streamlit/assets/result-text.png?raw=true" width="1000" height="500"/><br>

@@ -2,7 +2,8 @@
 
 from config import app_config
 import streamlit as st
-import s3fs
+
+# import s3fs
 
 
 def setup_app(config):
@@ -60,15 +61,15 @@ def get_class_from_name(module: str, class_name: str):
 #     return pred, pred_proba.squeeze()
 
 
-def download_from_s3(source_s3_uri, target_file):
-    """connect to S3 and download file"""
-    with st.spinner(
-        f"Downloading trained model it may take few minutes, please be patient..."
-    ):
-        fs = s3fs.S3FileSystem(
-            key=st.secrets["AWS_ACCESS_KEY"], secret=st.secrets["AWS_ACCESS_SECRET"]
-        )
-        fs.download(source_s3_uri, target_file)
+# def download_from_s3(source_s3_uri, target_file):
+#     """connect to S3 and download file"""
+#     with st.spinner(
+#         f"Downloading trained model it may take few minutes, please be patient..."
+#     ):
+#         fs = s3fs.S3FileSystem(
+#             key=st.secrets["AWS_ACCESS_KEY"], secret=st.secrets["AWS_ACCESS_SECRET"]
+#         )
+#         fs.download(source_s3_uri, target_file)
 
 
 def read(file) -> str:

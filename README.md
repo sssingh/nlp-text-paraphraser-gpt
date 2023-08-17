@@ -1,6 +1,6 @@
 <a href="https://nlp-text-paraphraser-gpt-sssingh.streamlit.app/"  target="_blank"><img src="https://img.shields.io/badge/open_app_in_streamlit-f63366?style=for-the-badge&logo=streamlit&logoColor=black" /></a>
 
-<img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/assets/title.png?raw=true" width="1000" height="300"/><br><br> 
+<img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/streamlit/assets/title.png?raw=true" width="1000" height="300"/><br><br> 
 
 # Introduction  
 ***This App demonstrates the `text paraphrasing` NLP functionality.***
@@ -13,13 +13,13 @@ The app contains two tabs: "ABOUT" and "TEXT PARAPHRASER".
 This page, describes the app usage and architecture
     
 ## TEXT PARAPHRASER
-Input a text paragraph in the provided text space and then click the 'Para' button. The app will analyse the input text and generate a 'paraphrased' version of the input text paragraph while keeping the sense of the paragraph unaltered. Below is an example of input and output...
+Input a text paragraph in the provided text space and then click the 'Para' button. The app will analyse the input text and generate a 'paraphrased' version of the input text paragraph while keeping the sense of the paragraph unaltered. Below is an example of input and output... 
 
 #### Input
-<img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/assets/input-text.png?raw=true"/><br>
+<img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/streamlit/assets/input-text.png?raw=true" width="1000" height="500"/><br>
 
 #### Output
-<img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/assets/output-text.png?raw=true"/>
+<img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/streamlit/assets/result-text.png?raw=true" width="1000" height="500"/><br>
 
 * Please keep in mind that this sample demo app is hosted utilizing the free tiers of'streamlit community cloud' and 'Amazon Web Services,' making it useable but somewhat lacking in speed and quality of paraphrasing. 
 * Due to cost and resource limits, the App currently only supports a maximum of 100 words per paraphrase request.
@@ -29,7 +29,7 @@ Input a text paragraph in the provided text space and then click the 'Para' butt
 
 ### App Architecture:
 
-<img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/assets/architecture.png?raw=true"/>
+<img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/streamlit/assets/architecture.png?raw=true"/>
 
 The app has three main components:
 1. **Streamlit cloud hosted UI**: 

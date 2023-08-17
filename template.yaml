@@ -1,0 +1,59 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  python3.11
+
+  Sample SAM Template for text-paraphraser-gpt
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 3
+    MemorySize: 3008
+    Tracing: Active
+  Api:
+    TracingEnabled: true
+Resources:
+  ParaphraserGPTFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+      - x86_64
+      Events:
+        ParaphraserGPT:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /paraphrase
+            Method: POST
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./paraphraser-gpt
+      DockerTag: python3.11-v1
+
+  ApplicationResourceGroup:
+    Type: AWS::ResourceGroups::Group
+    Properties:
+      Name:
+        Fn::Sub: ApplicationInsights-SAM-${AWS::StackName}
+      ResourceQuery:
+        Type: CLOUDFORMATION_STACK_1_0
+  ApplicationInsightsMonitoring:
+    Type: AWS::ApplicationInsights::Application
+    Properties:
+      ResourceGroupName:
+        Ref: ApplicationResourceGroup
+      AutoConfigurationEnabled: 'true'
+Outputs:
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  ParaphraserGPTApi:
+    Description: API Gateway endpoint URL for Prod stage for ParaphraserGPT function
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/paraphrase/"
+  ParaphraserGPTFunction:
+    Description: ParaphraserGPT Lambda Function ARN
+    Value: !GetAtt ParaphraserGPTFunction.Arn
+  ParaphraserGPTFunctionIamRole:
+    Description: Implicit IAM Role created for ParaphraserGPT function
+    Value: !GetAtt ParaphraserGPTFunctionRole.Arn

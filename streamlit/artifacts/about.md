@@ -8,7 +8,7 @@ The app contains two tabs: "ABOUT" and "TEXT PARAPHRASER".
 This page, describes the app usage and architecture
     
 ## TEXT PARAPHRASER
-Input a text paragraph in the provided text space and then click the 'Para' button. The app will analyse the input text and generate a 'paraphrased' version of the input text paragraph while keeping the sense of the paragraph unaltered. Below is an example of input and output...
+Input a text paragraph in the provided text-area and then click the 'Paraphrase' button. The app will analyse the input text and generate a 'paraphrased' version of the input text paragraph while keeping the sense of the paragraph unaltered. Below is an example of input and output...
 
 #### Input
 <img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/streamlit/assets/input-texts.png?raw=true"/><br>
@@ -24,7 +24,7 @@ Input a text paragraph in the provided text space and then click the 'Para' butt
 
 ##### App Architecture:
 
-<img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/streamlit/assets/architecture.png?raw=true"/>
+<img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/streamlit/assets/architecture.png?raw=true"/><br>
 
 The app has three main components:
 1. **Streamlit cloud hosted UI**: 

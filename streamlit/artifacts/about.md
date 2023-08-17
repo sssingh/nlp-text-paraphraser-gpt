@@ -11,10 +11,10 @@ This page, describes the app usage and architecture
 Input a text paragraph in the provided text space and then click the 'Para' button. The app will analyse the input text and generate a 'paraphrased' version of the input text paragraph while keeping the sense of the paragraph unaltered. Below is an example of input and output...
 
 #### Input
-<img src="https://github.com/sssingh/text-paraphraser-gpt/blob/main/assets/input-text.png?raw=true"/><br>
+<img src="https://github.com/sssingh/text-paraphraser-gpt/blob/main/streamlit/assets/input-texts.png?raw=true"/><br>
 
 #### Output
-<img src="https://github.com/sssingh/text-paraphraser-gpt/blob/main/assets/output-text.png?raw=true"/>
+<img src="https://github.com/sssingh/text-paraphraser-gpt/blob/main/streamlit/assets/result-text.png?raw=true"/>
 
 * Please keep in mind that this sample demo app is hosted utilizing the free tiers of'streamlit community cloud' and 'Amazon Web Services,' making it useable but somewhat lacking in speed and quality of paraphrasing. 
 * Due to cost and resource limits, the App currently only supports a maximum of 100 words per paraphrase request.
@@ -24,7 +24,7 @@ Input a text paragraph in the provided text space and then click the 'Para' butt
 
 ##### App Architecture:
 
-<img src="https://github.com/sssingh/text-paraphraser-gpt/blob/main/assets/architecture.png?raw=true"/>
+<img src="https://github.com/sssingh/text-paraphraser-gpt/blob/main/streamlit/assets/architecture.png?raw=true"/>
 
 The app has three main components:
 1. **Streamlit cloud hosted UI**: 

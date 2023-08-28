@@ -26,7 +26,7 @@ def setup_app(config):
             f"<p style='text-align: left;'>{app_config.app_short_desc}</p>",
             unsafe_allow_html=True,
         )
-        logo.image(image=app_config.logo_image)
+        logo.image(image=app_config.logo_image, width=100)
         # st.divider()
 
 

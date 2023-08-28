@@ -32,7 +32,7 @@ class __AppConfig:
     # get current working directory
     cwd = os.getcwd()
     banner_image = f"{cwd}/"
-    logo_image = f"{cwd}/streamlit/assets/logo.svg"
+    logo_image = f"{cwd}/streamlit/assets/logo.png"
     app_title = "Text Paraphraser"
     app_icon = f"{cwd}/streamlit/assets/st_title.png"
     app_short_desc = "🤖 AI powered paraphraser"

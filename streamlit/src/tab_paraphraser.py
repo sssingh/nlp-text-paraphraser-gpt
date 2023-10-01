@@ -1,5 +1,6 @@
 """About tab rendering functionality"""
 
+import os
 from config import app_config
 import data
 import requests
@@ -11,7 +12,7 @@ import streamlit as st
 ###
 def __paraphrase(text):
     ### Invoke the lambda function via REST api call to paraphrase the text
-    url = st.secrets["API_ENDPOINT"]
+    url = os.getenv("API_ENDPOINT")
     headers = {"Content-Type": "application/json"}
     payload = {"text": text}
     response = requests.request(method="POST", url=url, headers=headers, json=payload)

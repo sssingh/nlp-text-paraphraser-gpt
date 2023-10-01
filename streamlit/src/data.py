@@ -1,5 +1,6 @@
 """All app-specific data and disk-IO related functionality implemented here"""
 
+import os
 import pymongo
 import streamlit as st
 
@@ -7,7 +8,7 @@ import streamlit as st
 @st.cache_resource
 def __get_db():
     """Connect to MongoDB Atlas instances"""
-    client = pymongo.MongoClient(st.secrets["MONGO_CONN_STR"])
+    client = pymongo.MongoClient(os.getenv("MONGO_CONN_STR"))
     return client
 
 

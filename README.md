@@ -1,4 +1,16 @@
-<a href="https://nlp-text-paraphraser-gpt-sssingh.streamlit.app/"  target="_blank"><img src="https://img.shields.io/badge/open_app_in_streamlit-f63366?style=for-the-badge&logo=streamlit&logoColor=black" /></a>
+---
+title: Nlp Text Paraphraser Gpt
+emoji: 📝
+colorFrom: pink
+colorTo: red
+sdk: streamlit
+sdk_version: 1.27.1
+app_file: streamlit/src/app.py
+pinned: false
+license: mit
+---
+
+<a href="https://huggingface.co/spaces/sssingh/nlp-text-paraphraser-gpt"  target="_blank"><img src="https://img.shields.io/badge/click_here_to_open_streamlit_app-f63366?style=for-the-badge&logo=streamlit&logoColor=black" /></a>
 
 <img src="https://github.com/sssingh/nlp-text-paraphraser-gpt/blob/main/streamlit/assets/title.png?raw=true" width="1000" height="350"/><br><br> 
 

@@ -17,9 +17,6 @@ def __paraphrase(text):
     payload = {"text": text}
     response = requests.request(method="POST", url=url, headers=headers, json=payload)
     response = response.json()
-    st.write(text)
-    st.write(url)
-    st.write(response)
     paraphrased_text = response["paraphrased_text"]
     return paraphrased_text
 
